@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class CubeConundrum {
 
     public static void main(String[] args) {
-        var inputLines = InputReader.readInput(2, 1);
+        var inputLines = InputReader.readInput(2);
         var games = inputLines.stream()
                               .map(CubeConundrum::parseGame)
                               .toList();

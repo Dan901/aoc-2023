@@ -8,8 +8,8 @@ import java.util.List;
 
 public class InputReader {
 
-    public static List<String> readInput(int day, int part) {
-        var inputPath = Paths.get("src/main/resources/day%d/input-%d.txt".formatted(day, part));
+    public static List<String> readInput(int day) {
+        var inputPath = Paths.get("src/main/resources/input-day-%d.txt".formatted(day));
         try {
             return Files.readAllLines(inputPath);
         } catch (IOException e) {
