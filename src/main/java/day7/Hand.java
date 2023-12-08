@@ -45,14 +45,7 @@ class Hand {
         cardCounts.remove(JOKER);
         var sortedCardCounts = new ArrayList<>(cardCounts.values());
         sortedCardCounts.sort(Comparator.reverseOrder());
-        for (int i = 0; i < sortedCardCounts.size(); i++) {
-            if (jokers == 0) {
-                break;
-            }
-            var addedJokers = Math.min(jokers, HAND_SIZE - sortedCardCounts.get(i));
-            sortedCardCounts.set(i, sortedCardCounts.get(i) + addedJokers);
-            jokers -= addedJokers;
-        }
+        sortedCardCounts.set(0, sortedCardCounts.get(0) + jokers);
         return sortedCardCounts;
     }
 
